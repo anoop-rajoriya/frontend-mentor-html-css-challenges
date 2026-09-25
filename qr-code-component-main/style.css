@@ -1,0 +1,98 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+
+:root {
+  --font-size-base: 15px;
+  --font-size-lg: 18px;
+
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+
+  --color-White: hsl(0, 0%, 100%);
+  --color-Slate-300: hsl(212, 45%, 89%);
+  --color-Slate-500: hsl(216, 15%, 48%);
+  --color-Slate-900: hsl(218, 44%, 22%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-base);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+
+  background-color: var(--color-Slate-300);
+  color: var(--color-Slate-900);
+
+  max-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  border-top: 2px solid var(--color-Slate-900);
+  color: var(--color-Slate-900);
+  padding: 12px;
+}
+
+footer a {
+  color: inherit;
+  font-weight: var(--font-weight-700);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#card {
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-White);
+  border-radius: 14px;
+
+  padding: 16px;
+}
+
+#card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#card h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-700);
+  text-align: center;
+  padding-top: 18px;
+}
+
+#card p {
+  color: var(--color-Slate-500);
+  text-align: center;
+  padding-block: 12px;
+}
