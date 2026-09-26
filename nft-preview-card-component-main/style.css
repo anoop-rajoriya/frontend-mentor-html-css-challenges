@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Outfit";
+  src: url(https://fonts.google.com/specimen/Outfit);
+}
+
+:root {
+  /* Primary */
+  --color-Blue-500: hsl(215, 51%, 70%);
+  --color-Cyan-400: hsl(178, 100%, 50%);
+  --color-Cyan-400-transparent: rgba(0, 255, 247, 0.5);
+
+  /* Neutral */
+  --color-Blue-950: hsl(217, 54%, 11%); /* (main BG) */
+  --color-Blue-900: hsl(216, 50%, 16%); /* (card BG) */
+  --color-Blue-800: hsl(215, 32%, 27%); /* line */
+  --color-White: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --font-sm: 16px;
+  --font-base: 18px;
+  --font-lg: 20px;
+
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+}
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  text-decoration: none;
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-300);
+  color: var(--color-White);
+}
+
+/* Site layout */
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-Blue-950);
+  font-family: "Outfit", sans-serif;
+}
+
+.site-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 12px;
+  border-top: 2px solid var(--color-Blue-800);
+}
+
+.site-footer a {
+  font-weight: var(--font-weight-600);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Site Components */
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--color-Blue-900);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img .img-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-Cyan-400-transparent);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-overlay img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-img:hover .img-overlay {
+  display: flex;
+}
+
+.card-body {
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card-title a {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-600);
+  cursor: pointer;
+}
+
+.card-title a:hover {
+  color: var(--color-Cyan-400);
+}
+
+.card-desc {
+  color: var(--color-Blue-500);
+  font-weight: var(--font-weight-300);
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-details > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-400);
+}
+
+.card-details .card-icons {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.card-details div:first-child {
+  color: var(--color-Cyan-400);
+}
+.card-details div:last-child {
+  color: var(--color-Blue-500);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  border-top: 2px solid var(--color-Blue-800);
+  padding-block: 16px;
+}
+
+.card-footer .avatar-img {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.card-footer p {
+  color: var(--color-Blue-500);
+  font-size: var(--font-sm);
+}
+
+.card-footer .avatar-name:hover {
+  color: var(--color-Cyan-400);
+}
